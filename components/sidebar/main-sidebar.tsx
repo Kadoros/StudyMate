@@ -74,6 +74,10 @@ const data = {
           title: "PDF Viewer",
           url: "/pdf",
         },
+        {
+          title: "MD to PDF",
+          url: "/md2pdf",
+        },
       ],
     },
   ],

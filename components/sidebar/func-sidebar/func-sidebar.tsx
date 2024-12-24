@@ -59,8 +59,9 @@ const data = {
 };
 
 export function FuncSidebar({ ...props }) {
-  const selectedText = usePDFHighlight((state) => state.selectedText);
+  const pdfSelectedText = usePDFHighlight((state) => state.selectedText);
   const [funcId, setFuncId] = React.useState(1);
+  
 
   const handleFuncChange = (id: number) => {
     setFuncId(id);
@@ -76,7 +77,7 @@ export function FuncSidebar({ ...props }) {
         </SidebarHeader>
         <SidebarContent>
           {/* Dynamically render the selected component */}
-          {SelectedComponent && <SelectedComponent text={selectedText} />}
+          {SelectedComponent && <SelectedComponent text={pdfSelectedText} />}
         </SidebarContent>
         <SidebarFooter></SidebarFooter>
         <SidebarRail />

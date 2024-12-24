@@ -15,10 +15,10 @@ const Heading = () => {
     <div className="max-w-3xl space-y-4">
       <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
         Your Ideas, Documents, & Plans. Unified. Welcome to{" "}
-        <span className="underline">Kotion</span>
+        <span className="underline">StudyMate</span>
       </h1>
       <h3 className="text-base sm:text-xl md:text-2xl font-medium">
-        Kotion is the connected workspace where <br />
+      StudyMate is the connected workspace where <br />
         better, faster work happens.
       </h3>
       {!isLoaded && (
@@ -28,8 +28,8 @@ const Heading = () => {
       )}
       {isSignedIn && isLoaded && (
         <Button asChild>
-          <Link href="/documents">
-            Enter Kotion
+          <Link href="/hub">
+            Enter StudyMate
             <ArrowRight className="h-4 w-4 ml-2" />
           </Link>
         </Button>

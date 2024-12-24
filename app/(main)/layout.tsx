@@ -7,8 +7,8 @@ import React from "react";
 import { MainSidebar } from "@/components/sidebar/main-sidebar";
 import RoleGate from "@/components/auth/role-gate";
 import { UserRole } from "@/types";
-import { SidebarProvider } from "@/components/ui/sidebar";
 import { FuncSidebar } from "@/components/sidebar/func-sidebar/func-sidebar";
+import SidebarProvider from "@/components/providers/sidebar-provider";
 
 const MainLayout = ({
   children,
@@ -31,12 +31,10 @@ const MainLayout = ({
     <div className="h-full w-full flex dark:bg-[#1F1F1F]">
       <RoleGate allowedRoles={[UserRole.ADMIN, UserRole.MANAGER]}>
         {/* <Navigation /> */}
-        <MainSidebar />
-        <main className="flex-1 h-full overflow-y-auto">
-          {/* <SearchCommand /> */}
-          {children}
-        </main>
-        <FuncSidebar side="right" />
+
+        {/* <MainSidebar/> */}
+        <SidebarProvider>{children}</SidebarProvider>
+        {/* <FuncSidebar side="right" /> */}
       </RoleGate>
     </div>
   );

@@ -3,6 +3,8 @@
 import { SettingsModal } from "@/components/modals/settings-model";
 
 import React, { useEffect, useState } from "react";
+import { ExportModal } from "@/components/modals/export-modal";
+import { ImportModal } from "@/components/modals/import-modal";
 
 
 export const ModelProvider = () => {
@@ -19,6 +21,7 @@ export const ModelProvider = () => {
   return (
     <>
       <SettingsModal />
+
 
     </>
   );

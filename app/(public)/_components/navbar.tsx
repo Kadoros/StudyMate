@@ -31,14 +31,14 @@ const Navbar = () => {
               </Button>
             </SignInButton>
             <SignInButton mode="modal" signUpForceRedirectUrl={"/"} signUpFallbackRedirectUrl={"/"}>
-              <Button size="sm">Get Kotion free</Button>
+              <Button size="sm">Get StudyMate free</Button>
             </SignInButton>
           </>
         )}
         {isSignedIn && !!isLoaded && (
           <>
             <Button variant={"ghost"} size={"sm"}>
-              <Link href={"/documents"}>Enter Kotion</Link>
+              <Link href={"/documents"}>Enter StudyMate</Link>
             </Button>
             <UserButton/>
           </>
